@@ -2,6 +2,12 @@
 window.manager = new Manager();
 
 
+// index.js 最顶部
+const token = localStorage.getItem('token');
+if (!token) {
+    location.href = '/welcome.html';
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     const logoutBtn = document.getElementById('logout-btn');
     if (!logoutBtn) return;
@@ -13,6 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         localStorage.removeItem('token');
         alert('LOGOUT SUCCESSFUL');
-        location.href = '/login.html';
+        location.href = '/welcome.html';
     });
 });

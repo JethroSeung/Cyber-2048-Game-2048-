@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>Cyber 2048 - 游戏启动页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            background: #000;
+            font-family: 'Orbitron', sans-serif;
+            color: #00f3ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .welcome-container {
+            width: 520px;
+            padding: 50px 40px;
+            border: 2px solid #00f3ff;
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0,243,255,0.6);
+            background: rgba(0,0,0,0.88);
+            text-align: center;
+        }
+
+        .game-title {
+            font-size: 60px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+            text-shadow: 0 0 20px #00f3ff;
+        }
+
+        .health-title {
+            font-size: 24px;
+            color: #f9f002;
+            margin-bottom: 16px;
+            letter-spacing: 2px;
+        }
+
+        .health-text {
+            font-size: 15px;
+            line-height: 2;
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .btn {
+            padding: 14px;
+            border-radius: 12px;
+            border: 2px solid #00f3ff;
+            background: transparent;
+            color: #00f3ff;
+            font-size: 19px;
+            cursor: pointer;
+            transition: 0.25s;
+            letter-spacing: 2px;
+        }
+
+        .btn:hover {
+            background: #00f3ff;
+            color: #000;
+            box-shadow: 0 0 18px #00f3ff;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="welcome-container">
+    <div class="game-title">CYBER 2048</div>
+
+    <div class="health-title">健康游戏忠告</div>
+    <div class="health-text">
+        抵制不良游戏，拒绝盗版游戏<br>
+        注意自我保护，谨防受骗上当<br>
+        适度游戏益脑，沉迷游戏伤身<br>
+        合理安排时间，享受健康生活
+    </div>
+
+    <div class="btn-group">
+        <button class="btn" onclick="goRegister()">注册账号</button>
+        <button class="btn" onclick="goLogin()">登录游戏</button>
+    </div>
+</div>
+
+<script>
+    function goLogin() {
+        location.href = "/login.html";
+    }
+
+    function goRegister() {
+        location.href = "/register.html";
+    }
+</script>
+
+</body>
+</html>
