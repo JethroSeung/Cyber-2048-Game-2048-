@@ -14,8 +14,10 @@ public class WebConfig implements WebMvcConfigurer {
                 .excludePathPatterns(
                         "/api/user/login",
                         "/welcome.html",
-                        "/api/user/register"
-                );
+                        "/api/user/register",
+                        "/register.html",
+                        "/login.html"
+                        );
     }
 
     @Override
